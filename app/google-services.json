@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1044648040381:android:d85a73f779be300d",
+        "mobilesdk_app_id": "1:1044648040381:android:0b1f4b3459a2b17f2e24d4",
         "android_client_info": {
-          "package_name": "com.vyom.internal.pricing"
+          "package_name": "io.gojek.weather"
         }
       },
       "oauth_client": [
@@ -25,46 +25,13 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:1044648040381:android:a07de7eef635d3fe",
-        "android_client_info": {
-          "package_name": "sanshinkan.org.warrior"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "1044648040381-cuj781cjmvofreq46a4bdiihfm37e0iq.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAmfpwS3Wdqbij8w0wlpB_vI6cEJuQOUio"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1044648040381-301houdr65mngu0vdidgh7spv46kr3f3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

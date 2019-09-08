@@ -20,7 +20,6 @@
     <dimen name="height35">35dp</dimen>
     <dimen name="size40">40dp</dimen>
     <dimen name="size48">48dp</dimen>
-    <dimen name="height0.50">0.50dp</dimen>
     <dimen name="height1">1dp</dimen>
     <dimen name="height2">2dp</dimen>
     <dimen name="height3">3dp</dimen>
@@ -28,7 +27,6 @@
     <dimen name="height5">5dp</dimen>
     <dimen name="height6">6dp</dimen>
     <dimen name="height7">7dp</dimen>
-    <dimen name="height7.5">7.5dp</dimen>
     <dimen name="height8">8dp</dimen>
     <dimen name="height10">10dp</dimen>
     <dimen name="height12">12dp</dimen>

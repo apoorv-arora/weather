@@ -1,30 +1,16 @@
-buildscript {
-    repositories {
-        maven { url 'https://maven.fabric.io/public' }
-        mavenCentral()
-    }
-
-    dependencies {
-        classpath 'io.fabric.tools:gradle:1.+'
-    }
-}
 apply plugin: 'com.android.application'
-apply plugin: 'io.fabric'
-repositories {
-    maven { url 'https://maven.fabric.io/public' }
-}
 
 android {
     compileSdkVersion 26
-//    buildToolsVersion "25.0.2"
+
     defaultConfig {
-        applicationId "sanshinkan.org.warrior"
+        applicationId "io.gojek.weather"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
-
     }
+
     lintOptions {
         checkReleaseBuilds true
         abortOnError true
@@ -42,22 +28,14 @@ android {
         }
     }
 
-    def final appName = "rtist.io"
-
     productFlavors {
         dev {
-            buildConfigField "String", "HOST", "\"http://192.168.0.145:8080/sanshinkan_backend/rest/\""
-            buildConfigField "String", "GCM_SENDER_ID", "\"882970671561\""
-            resValue "string", "appname", appName + defaultConfig.versionName + "-Dev"
-            resValue "string", "app_key", "AIzaSyBSt4ltvPRNGFPWsX2KUFcv-KeKZGEyxII"
+            buildConfigField "String", "HOST", "\"https://api.apixu.com/v1/\""
             dimension "default"
         }
 
         prod {
-            buildConfigField "String", "HOST", "\"http://192.168.0.145:8080/sanshinkan_backend/rest/\""
-            buildConfigField "String", "GCM_SENDER_ID", "\"966630461077\""
-            resValue "string", "appname", appName
-            resValue "string", "app_key", "AIzaSyBSt4ltvPRNGFPWsX2KUFcv-KeKZGEyxII"
+            buildConfigField "String", "HOST", "\"https://api.apixu.com/v1/\""
             dimension "default"
         }
     }
@@ -74,19 +52,7 @@ android {
 dependencies {
     // network libraries
     compile 'com.android.volley:volley:1.1.1'
-
     implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
-
-//    // support libraries
-//    compile 'com.android.support:appcompat-v7:25.3.1'
-
-    // let's pour some fire
-    implementation 'com.google.firebase:firebase-core:16.0.7'
-//    implementation 'com.google.firebase:firebase-auth:16.1.0'
-
-    // chrome custom tabs for handling external links
-    implementation 'com.android.support:customtabs:26.1.0'
 
     // design libraries
     implementation 'com.android.support:design:26.1.0'
@@ -96,12 +62,6 @@ dependencies {
     // play services libraries
     implementation 'com.google.android.gms:play-services-base:16.1.0'
     implementation 'com.google.android.gms:play-services-location:16.0.0'
-    implementation 'com.google.android.gms:play-services-auth:16.0.1'
-    implementation 'com.google.android.gms:play-services-plus:16.0.0'
 
-    // for our lovely crashes
-    compile('com.crashlytics.sdk.android:crashlytics:2.6.5@aar') {
-        transitive = true
-    }
 }
 apply plugin: 'com.google.gms.google-services'
