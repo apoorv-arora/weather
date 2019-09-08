@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="sanshinkan.org.warrior.views.activities.Home">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height48"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/search_layout"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/size10"
+                    android:layout_margin="@dimen/size5"
+                    android:clickable="true"
+                    android:background="@drawable/oval_border_feedback">
+
+                    <sanshinkan.org.warrior.utils.views.IconView
+                        android:id="@+id/search_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/ic_search"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/size12" />
+
+                    <sanshinkan.org.warrior.utils.views.TextViewRegular
+                        android:id="@+id/search_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/size5"
+                        android:paddingRight="@dimen/size5"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/search_icon"
+                        android:text="@string/search"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/size12" />
+
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:id="@+id/editable_search_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:visibility="gone"
+                    android:layout_toRightOf="@+id/back_icon"
+                    android:padding="@dimen/size5">
+
+                    <sanshinkan.org.warrior.utils.views.EditTextRegular
+                        android:id="@+id/editable_search_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:ellipsize="end"
+                        android:hint="@string/search_hint"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/size5"
+                        android:paddingRight="@dimen/size5"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/size12" />
+
+                    <sanshinkan.org.warrior.utils.views.IconView
+                        android:id="@+id/cross_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="right|center_vertical"
+                        android:text="@string/ic_cross"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/size12" />
+
+                </FrameLayout>
+
+                <sanshinkan.org.warrior.utils.views.TextViewRegular
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/search_layout"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/size5"
+                    android:paddingRight="@dimen/size5"
+                    android:layout_centerVertical="true"
+                    android:text="@string/ic_camera"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size12" />
+
+                <sanshinkan.org.warrior.utils.views.IconView
+                    android:id="@id/back_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:visibility="gone"
+                    android:text="@string/ic_back"
+                    android:paddingLeft="@dimen/size5"
+                    android:paddingRight="@dimen/size10"
+                    android:paddingTop="@dimen/size10"
+                    android:paddingBottom="@dimen/size10"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size18" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_home" />
+
+</android.support.design.widget.CoordinatorLayout>

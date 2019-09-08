@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:id="@+id/logo_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/size32">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="@dimen/height70"
+            android:layout_height="@dimen/height70"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo_black" />
+
+        <sanshinkan.org.warrior.utils.views.TextViewMedium
+            android:id="@+id/app_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/company"
+            android:padding="@dimen/size10"
+            android:gravity="top|center_horizontal"
+            android:textSize="@dimen/size18"
+            android:textColor="@color/white"/>
+
+        <sanshinkan.org.warrior.utils.views.TextViewRegular
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:padding="@dimen/size10"
+            android:gravity="top|center_horizontal"
+            android:textSize="@dimen/size16"
+            android:textColor="@color/white_trans_eighty"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white_trans_ten"
+        android:visibility="gone"
+        android:padding="@dimen/size10">
+
+        <sanshinkan.org.warrior.utils.views.TextViewRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/terms"
+            android:gravity="center"
+            android:padding="@dimen/size5"
+            android:textSize="@dimen/size8"
+            android:textColor="@color/white"/>
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_in_button"
+            android:layout_margin="@dimen/size5"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

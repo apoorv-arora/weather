@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/transparent_super_white" >
+
+    <item
+        android:id="@android:id/mask"
+        android:state_pressed="true">
+        <shape android:shape="rectangle" >
+            <corners android:radius="@dimen/height4" />
+
+            <solid android:color="@color/blueButton_pressed" />
+        </shape>
+    </item>
+    <item>
+        <selector>
+            <item android:state_enabled="false">
+                <shape android:shape="rectangle" >
+                    <corners android:radius="@dimen/height4" />
+
+                    <solid android:color="@color/shade_gray" />
+                </shape>
+            </item>
+            <item>
+                <shape android:shape="rectangle" >
+                    <corners android:radius="@dimen/height4" />
+
+                    <solid android:color="@color/blueButtonColor" />
+                </shape>
+            </item>
+        </selector>
+    </item>
+
+</ripple>

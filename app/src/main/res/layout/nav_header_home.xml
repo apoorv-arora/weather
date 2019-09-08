@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height150"
+    android:background="@color/black_trans_fifty"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/size10"
+    android:paddingLeft="@dimen/size10"
+    android:paddingRight="@dimen/size10"
+    android:paddingTop="@dimen/size10"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:id="@+id/userimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/size10"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <sanshinkan.org.warrior.utils.views.TextViewRegular
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/size10" />
+
+    <sanshinkan.org.warrior.utils.views.TextViewLight
+        android:id="@+id/useremail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
